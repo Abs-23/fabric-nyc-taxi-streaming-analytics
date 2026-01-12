@@ -111,12 +111,13 @@ Displays real-time trip volume and revenue by hour, updated every 15 minutes thr
    - Logs pipeline run status and performs data quality checks on the processed window
 
 4. **Power BI integration**: The gold streaming table connects to the existing semantic model for near-real-time dashboard updates.
+   
 
 <img width="1919" height="815" alt="Image" src="https://github.com/user-attachments/assets/0c432358-2288-44ed-b767-e235368608ca" />
-*Eventstream ingestion in action*
+                                                   *Eventstream ingestion in action*
 
 <img width="1918" height="827" alt="Image" src="https://github.com/user-attachments/assets/6dbc4113-594b-4ed4-a7ac-c4abbd8615ca" />
-*KQL database metrics showing streaming throughput*
+                                             *KQL database metrics showing streaming throughput*
 
 ---
 
@@ -128,7 +129,7 @@ Displays real-time trip volume and revenue by hour, updated every 15 minutes thr
 
 **Incremental streaming processing**: Custom watermarking logic tracks the latest processed hour in the gold table and filters silver data to only process new records, preventing duplicates and reducing compute on each run
 
-**Scheduled automation**: Runs a notebook every 15 minutes with pipeline logging (run IDs, status, rows written) and data quality checks (trip counts, average amounts, percentage of invalid trip distances in the processed window)
+**Scheduled automation**: Runs a notebook every 1 hour with pipeline logging (run IDs, status, rows written) and data quality checks (trip counts, average amounts, percentage of invalid trip distances in the processed window)
 
 **Weather enrichment**: Joins external weather data to taxi trips to explore how rain, snow, or clear conditions affect demand patterns
 
@@ -166,7 +167,7 @@ These checks write to dedicated tables (`pipeline_run_log` and `dq_streaming_che
 **Processing**: PySpark (batch transformations, watermark logic), SQL (aggregations), KQL (streaming validation)  
 **Storage**: Delta Lake (bronze/silver/gold tables)  
 **Analytics**: Power BI with DAX measures (total revenue, avg distance, trip counts), Direct Lake mode  
-**Orchestration**: Scheduled notebooks (15-minute intervals), Fabric pipelines for batch ingestion  
+**Orchestration**: Scheduled notebooks (1 hour intervals), Fabric pipelines for batch ingestion  
 **Validation**: Automated logging (row counts, null checks, timestamp alignment)
 
 ---
@@ -203,16 +204,5 @@ To run this project:
 5. **Import Power BI report**: Open `NYC_Taxi_Analytics.pbix` and connect to your Fabric semantic model
 
 Notebooks run standalone in VS Code or Databricks Community if you hit Fabric trial limits.
-
----
-
-## Skills Covered
-
-- Batch and streaming data processing in Microsoft Fabric
-- Incremental watermarking for efficient stream processing
-- Medallion architecture (bronze/silver/gold layers)
-- Power BI semantic modeling with star schema
-- Data quality validation and pipeline logging
-- KQL for real-time data validation
 
 ---
