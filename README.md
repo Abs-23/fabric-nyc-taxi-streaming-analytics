@@ -37,14 +37,14 @@ Five Power BI pages explore different aspects of taxi operations.
 ### 1. Revenue Analysis
 Shows total revenue, trip counts, and average fares by zone with filters for date range and time of day. The scatter plot compares trip volume against revenue to identify high-performing zones.
 
-<img width="1740" height="802" alt="Image" src="https://github.com/user-attachments/assets/449b3cdd-482c-41bd-9fba-01b3ba6eca7c" />
+<img width="1737" height="802" alt="Image" src="https://github.com/user-attachments/assets/2b574aef-136e-4717-af18-eb2537128937" />
 
 ---
 
 ### 2. Demand Patterns
 Displays hourly and daily trip patterns with weekday vs weekend comparisons. The heat map shows trip volume by date and hour, while the trend line tracks how demand changes across the month.
 
-<img width="1737" height="802" alt="Image" src="https://github.com/user-attachments/assets/2b574aef-136e-4717-af18-eb2537128937" />
+<img width="1740" height="802" alt="Image" src="https://github.com/user-attachments/assets/449b3cdd-482c-41bd-9fba-01b3ba6eca7c" />
 
 ---
 
