@@ -115,6 +115,7 @@ Displays real-time trip volume and revenue by hour, updated every 15 minutes thr
 
 <img width="1919" height="815" alt="Image" src="https://github.com/user-attachments/assets/0c432358-2288-44ed-b767-e235368608ca" />
                                                    *Eventstream ingestion in action*
+                                                   
 
 <img width="1918" height="827" alt="Image" src="https://github.com/user-attachments/assets/6dbc4113-594b-4ed4-a7ac-c4abbd8615ca" />
                                              *KQL database metrics showing streaming throughput*
