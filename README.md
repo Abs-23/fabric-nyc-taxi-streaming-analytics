@@ -74,7 +74,7 @@ Displays real-time trip volume and revenue by hour, updated every 15 minutes thr
 ### Batch Pipeline (Historical Analysis)
 
 **Data sources:**
-- NYC Yellow Taxi trip data (Parquet file with 2.8M records)
+- NYC Yellow Taxi trip data (Parquet file with 4.8M records)
 - Weather data (CSV file with daily conditions)
 
 **Processing flow:**
